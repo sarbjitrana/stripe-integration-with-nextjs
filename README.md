@@ -32,6 +32,6 @@ Start your Next.js application using:
 npm run dev
 ```
 
-Navigate to `http://localhost:3001/checkout` to see your checkout page. When you click the checkout button, it will create a checkout session and redirect you to Stripe's checkout page.
+Navigate to `http://localhost:3001/` to see your checkout page. When you click the checkout button, it will create a checkout session and redirect you to Stripe's checkout page.
 
 
