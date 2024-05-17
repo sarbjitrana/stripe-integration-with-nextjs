@@ -2,35 +2,36 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### 1. Set Up Your Next.js Project
+First, ensure you have a Next.js project set up. If not, you can create one using:
+
+```bash
+npx create-next-app@latest my-stripe-app
+
+```
+
+### 2. Install Stripe Packages
+Install the necessary Stripe packages for both the client-side and server-side:
+
+```bash
+npm install @stripe/stripe-js stripe
+```
+
+### 3. Configure Environment Variables
+Create a `.env.local` file at the root of your project to store your Stripe secret and public keys:
+
+```plaintext
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your-publishable-key
+STRIPE_SECRET_KEY=your-secret-key
+```
+
+### 4. Run Your Next.js Application
+Start your Next.js application using:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate to `http://localhost:3001/checkout` to see your checkout page. When you click the checkout button, it will create a checkout session and redirect you to Stripe's checkout page.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
